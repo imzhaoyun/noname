@@ -22,6 +22,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 			ol_shenfen:{
 				audio:2,
 				enable:'phaseUse',
+				usable;1,
 				filter:function(event,player){
 					return player.storage.baonu>=6;
 				},
@@ -71,6 +72,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 			},
 			ol_wuqian:{
 				audio:2,
+				usable;1,
 				enable:'phaseUse',
 				derivation:'wushuang',
 				filter:function(event,player){
@@ -623,7 +625,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 			},
 			wuhun:{
 				trigger:{
-                player:"damageEnd",
+                player:'damageEnd',
                               },
                               alter:true,
                        filter:function (event,player){
@@ -640,17 +642,17 @@ game.import('character',function(lib,game,ui,get,ai,_status){
                       trigger.source.syncStorage('wuhun_mark');
                       trigger.source.markSkill('wuhun_mark');
                                },
-                       global:["wuhun_mark"],
+                       global:['wuhun_mark'],
                       subSkill:{
                         mark:{
-                        marktext:"魇",
+                        marktext:'魇',
                           intro:{
-                            content:"mark",
+                            content:'mark',
                                   },
                             sub:true,
                                 },
                           },
-         		group:["wuhun2","wuhun4","wuhun5"],
+         		group:['wuhun2','wuhun4','wuhun5'],
             },
 			wuhun2:{
 				trigger:{
